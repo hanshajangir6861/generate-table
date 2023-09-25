@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Table</title>
+</head>
+<body>
+  <div id="wrapper">
+<h2>enter number</h2>
+<input type="text" placeholder="enter a number" id="num">
+<button>Generate a table</button>
+<p></p>
+  </div>
+  
+    <script>
+const btn=document.querySelector("button");
+const inp=document.querySelector("input");
+btn.onclick=()=>{
+    document.querySelector("p").innerHTML=""
+    const n=document.getElementById('num').value;
+    var output="";
+    for(var i=1; i<=10; i++)
+{
+    output=output +i+"*"+n+"="+i*n+"</br>";
+}
+document.querySelector("p").innerHTML=output;
+}
+    </script>
+</body>
+</html>
